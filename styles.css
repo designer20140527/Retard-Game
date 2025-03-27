@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #E6E6E6;
+    overflow-x: hidden;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    padding-top: 50.24%; 
+}
+
+canvas {
+    border: 1px solid black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+.header-image {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    margin-bottom: 50px;
+}
+
+.header-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    gap: 50px;
+    padding: 0;
+}
+
+.square-image {
+    flex: 1;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.square-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.start-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+.start-screen img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.start-screen p {
+    color: white;
+    font-size: 80px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.social-icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* iPad 和平板电脑 (portrait and landscape) */
+@media screen and (max-width: 1024px) {
+    .icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .image-row {
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .social-icons {
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .start-screen img {
+        max-width: 30%;
+        margin-bottom: 15px;
+    }
+
+    .start-screen p {
+        font-size: 28px;
+    }
+
+    /* 调整游戏内容大小 */
+    .game-container {
+        font-size: 28px;  /* 减小游戏内文字大小 */
+    }
+
+    /* 调整游戏内文字大小 */
+    canvas {
+        font-size: 32px;
+    }
+}
+
+/* 手机端 */
+@media screen and (max-width: 768px) {
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .image-row {
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .start-screen img {
+        max-width: 20%;
+        margin-bottom: 10px;
+    }
+
+    .start-screen p {
+        font-size: 18px;
+    }
+
+    /* 调整游戏内容大小 */
+    .game-container {
+        font-size: 20px;  /* 进一步减小游戏内文字大小 */
+    }
+
+    /* 调整游戏内文字大小 */
+    canvas {
+        font-size: 24px;
+    }
+
+    /* 增加游戏区域的触摸响应区域 */
+    .game-container {
+        touch-action: none;
+    }
+} 
