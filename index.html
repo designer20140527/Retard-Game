@@ -15,7 +15,7 @@ The game also uses music and a couple of sound effects.
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Fatass</title>
+        <title>Retard Game</title>
         <link rel="icon" href="Images/logo-transparent.png">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="styles.css">
@@ -75,8 +75,8 @@ The game also uses music and a couple of sound effects.
                 function getResponsiveSize() {
                     if (window.innerWidth <= 768) {
                         return {
-                            playerWidth: 120,  // 手机端人物宽度
-                            playerHeight: 88,  // 保持比例
+                            playerWidth: 100,  // 手机端人物宽度
+                            playerHeight: 200,  // 1:2比例
                             fruitSize: 50,    // 减小手机端掉落物品大小
                             fontSize: 16,      // 减小手机端文字大小
                             gameOverFontSize: 32, // 游戏结束文字大小
@@ -84,8 +84,8 @@ The game also uses music and a couple of sound effects.
                         };
                     } else if (window.innerWidth <= 1024) {
                         return {
-                            playerWidth: 200,
-                            playerHeight: 147,
+                            playerWidth: 150,
+                            playerHeight: 300,
                             fruitSize: 80,    // 减小平板端掉落物品大小
                             fontSize: 24,
                             gameOverFontSize: 40,
@@ -93,8 +93,8 @@ The game also uses music and a couple of sound effects.
                         };
                     } else {
                         return {
-                            playerWidth: 500,
-                            playerHeight: 368,
+                            playerWidth: 320,
+                            playerHeight: 640,
                             fruitSize: 180,
                             fontSize: 40,
                             gameOverFontSize: 80,
@@ -164,25 +164,25 @@ The game also uses music and a couple of sound effects.
                         {
                             this.fruitType = "banana";
                             this.fruitScore = Math.round(5 * this.fruitSpeed);
-                            this.fruitImage.src = 'Images//hamburger-1.png';
+                            this.fruitImage.src = 'Images//coin-1.png';
                         }
                         else if(this.fruitNumber == 1)
                         {
                             this.fruitType = "apple";
                             this.fruitScore = Math.round(10 * this.fruitSpeed);
-                            this.fruitImage.src = 'Images//hamburger-2.png';
+                            this.fruitImage.src = 'Images//coin-2.png';
                         }
                         else if(this.fruitNumber == 2)
                         {
                             this.fruitType = "orange";
                             this.fruitScore = Math.round(15 * this.fruitSpeed);
-                            this.fruitImage.src = 'Images/hamburger-3.png';
+                            this.fruitImage.src = 'Images/coin-3.png';
                         }
                         else if(this.fruitNumber == 3)
                         {
                             this.fruitType = "pineapple";
                             this.fruitScore = Math.round(20 * this.fruitSpeed);
-                            this.fruitImage.src = 'Images//hamburger-4.png';
+                            this.fruitImage.src = 'Images//coin-4.png';
                         }
                     }
                     
@@ -383,24 +383,24 @@ The game also uses music and a couple of sound effects.
         </script>
     </head>
     <body>
-        <div class="header-image">
-            <img src="Images/header.png" alt="header image">
-        </div>
+        <header class="main-header">
+            <div class="logo">RETARD GAME</div>
+            <div class="header-icons">
+                <div class="icon">
+                    <a href="https://t.me/Retard_Game" target="_blank"><img src="Images/icon-1.png" alt="social icon 1"></a>
+                </div>
+                <div class="icon">
+                    <a href="https://x.com/Retard_Game_" target="_blank"><img src="Images/icon-2.png" alt="social icon 2"></a>
+                </div>
+                <div class="icon">
+                    <img src="Images/icon-3.png" alt="social icon 3">
+                </div>
+                <div class="icon">
+                    <img src="Images/icon-4.png" alt="social icon 4">
+                </div>
+            </div>
+        </header>
 
-        <div class="social-icons">
-            <div class="icon">
-                <a href="https://t.me/Fatass_Official" target="_blank"><img src="Images/icon-1.png" alt="social icon 1"></a>
-            </div>
-            <div class="icon">
-                <a href="https://x.com/Fatass_SOL_" target="_blank"><img src="Images/icon-2.png" alt="social icon 2"></a>
-            </div>
-            <div class="icon">
-                <img src="Images/icon-3.png" alt="social icon 3">
-            </div>
-            <div class="icon">
-                <img src="Images/icon-4.png" alt="social icon 4">
-            </div>
-        </div>
         
         <div class="image-row">
             <div class="square-image">
@@ -436,20 +436,30 @@ The game also uses music and a couple of sound effects.
             </div>
         </div>
         
-        <div class="social-icons">
-            <div class="icon">
-                <a href="https://t.me/Fatass_Official" target="_blank"><img src="Images/icon-1.png" alt="social icon 1"></a>
+        <div class="info-section">
+            <p class="main-info">1,000,000,000 $ReGame on Solana free to trade</p>
+            <p class="sub-info">join us on Telegram: <a href="https://t.me/Retard_Game" target="_blank">https://t.me/Retard_Game</a></p>
+            <p class="sub-info">join us on X: <a href="https://x.com/Retard_Game_" target="_blank">https://x.com/Retard_Game_</a></p>
+            <p class="small-info">$ReGame made by 4chan retard dev</p>
+        </div>
+
+        <div class="image-row">
+            <div class="square-image">
+                <img src="Images/image-10.png" alt="image 1">
             </div>
-            <div class="icon">
-                <a href="https://x.com/Fatass_SOL_" target="_blank"><img src="Images/icon-2.png" alt="social icon 2"></a>
-            </div>
-            <div class="icon">
-                <img src="Images/icon-3.png" alt="social icon 3">
-            </div>
-            <div class="icon">
-                <img src="Images/icon-4.png" alt="social icon 4">
+            <div class="square-image">
+                <img src="Images/image-11.png" alt="image 2">
             </div>
         </div>
+        <div class="image-row">
+            <div class="square-image">
+                <img src="Images/image-12.png" alt="image 1">
+            </div>
+            <div class="square-image">
+                <img src="Images/image-13.png" alt="image 2">
+            </div>
+        </div>
+        
 
         <div class="game-container">
             <div class="start-screen" id="startScreen">

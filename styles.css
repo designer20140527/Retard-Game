@@ -9,6 +9,32 @@ body {
     overflow-x: hidden;
 }
 
+.main-header {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.header-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.header-icons .icon {
+    width: 45px;
+    height: 45px;
+}
+
 .game-container {
     position: relative;
     width: 100%;
@@ -80,7 +106,7 @@ canvas {
 }
 
 .start-screen img {
-    max-width: 80%;
+    max-width: 25%;
     height: auto;
     margin-bottom: 30px;
 }
@@ -111,11 +137,84 @@ canvas {
     object-fit: contain;
 }
 
+.info-section {
+    width: 100%;
+    padding: 30px 20px;
+    background-color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.info-section .main-info {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.info-section .sub-info {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.info-section .sub-info a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.info-section .sub-info a:hover {
+    text-decoration: underline;
+}
+
+.info-section .small-info {
+    font-size: 16px;
+    color: #666;
+    margin-top: 20px;
+}
+
 /* iPad 和平板电脑 (portrait and landscape) */
 @media screen and (max-width: 1024px) {
     .icon {
         width: 60px;
         height: 60px;
+    }
+
+    .main-header {
+        padding: 15px 15px;
+    }
+    
+    .logo {
+        font-size: 26px;
+    }
+    
+    .header-icons {
+        gap: 10px;
+    }
+    
+    .header-icons .icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .info-section {
+        padding: 25px 15px;
+        margin-bottom: 30px;
+    }
+    
+    .info-section .main-info {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .info-section .sub-info {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    
+    .info-section .small-info {
+        font-size: 14px;
+        margin-top: 15px;
     }
 
     .image-row {
@@ -129,7 +228,7 @@ canvas {
     }
 
     .start-screen img {
-        max-width: 30%;
+        max-width: 20%;
         margin-bottom: 15px;
     }
 
@@ -153,6 +252,43 @@ canvas {
     .icon {
         width: 40px;
         height: 40px;
+    }
+    
+    .main-header {
+        padding: 12px 10px;
+    }
+    
+    .logo {
+        font-size: 22px;
+    }
+    
+    .header-icons {
+        gap: 8px;
+    }
+    
+    .header-icons .icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .info-section {
+        padding: 20px 10px;
+        margin-bottom: 20px;
+    }
+    
+    .info-section .main-info {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .info-section .sub-info {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    
+    .info-section .small-info {
+        font-size: 12px;
+        margin-top: 12px;
     }
 
     .image-row {
